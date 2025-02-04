@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font--color--primary: #f9f9f9;
+    --bar--color: #969494;
+
+    --font--primary: "Krona One", serif;
+    --font--secondary: 'Montserrat', serif;
+}
+
+.main__perfil__photo {
+    width: 40%;
+    position: absolute;
+    z-index: -1;
+    margin: 9% 30%;
+}
+
+.header {
+    padding: 41px 160px;
+    display: flex;
+    color: var(--font--color--primary);
+    justify-content: space-between;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.header__img {
+    width: 51px;
+}
+
+
+.header__name {
+    font-family: var(--font--secondary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 15.5px 3px;
+    color: var(--font--color--primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header__name:hover {
+    transform: scale(1.1);
+}
+
+
+.header__menu {
+    display: flex;
+    padding: 32px 3px;
+    justify-content: flex-end;
+    gap: 45px;
+
+}
+
+.header__menu__links {
+    text-decoration: none;
+    font-family: var(--font--primary);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--font--color--primary);
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.header__menu__links:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.header__menu:hover .header__menu__links:not(:hover) {
+    opacity: 0.5;
+}
+
+.header__hambuguer__menu {
+    cursor: pointer;
+}
+
+.main__container {
+    padding: 5% 160px;
+    display: flex;
+}
+
+.main__content {
+    width: 50%;
+}
+
+.main__separador {
+    padding-bottom: 38px;
+}
+
+.main__title {
+    font-size: 2.25rem;
+    font-family: var(--font--secondary);
+    color: var(--font--color--primary);
+    font-weight: 600;
+    width: 70%;
+    padding-bottom: 7px;
+}
+
+.main__text {
+    color: var(--font--color--primary);
+    font-size: 1.375rem;
+    font-family: var(--font--secondary);
+    width: 80%;
+    font-weight: 200;
+    padding-top: 1%;
+    padding-bottom: 8%;
+    opacity: .7;
+}
+
+.main__btn__scrool {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 30%;
+}
+
+.main__arrow {
+    width: 30%;
+    position: absolute;
+    transition: 0.3s;
+    padding: 4%;
+    z-index: 2;
+    margin: 0% 20%;
+    animation: floatArrow 2s ease-in-out infinite;
+}
+
+@keyframes floatArrow {
+    0% {
+        transform: translateY(0);
+        /* Começa no meio */
+    }
+
+    25% {
+        transform: translateY(-30px);
+        /* Sobe */
+    }
+
+    50% {
+        transform: translateY(20px);
+        /* Desce */
+    }
+
+    75% {
+        transform: translateY(-0px);
+        /* Volta mais próximo do meio */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Retorna ao centro */
+    }
+}
+
+.main__baloon {
+    width: 140px;
+    transition: 0.3s;
+}
+
+.main__btn__scrool:hover .main__baloon {
+    transform: scale(0.9);
+    /* Reduz 10% do tamanho original */
+}
+
+.main__content__information {
+    color: var(--font--color--primary);
+    font-family: var(--font--secondary);
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    flex: 1;
+}
+
+.main__second__title {
+    font-size: 1.5rem;
+    font-family: var(--font--secondary);
+    font-weight: 500;
+    padding-left: 35%;
+    padding-bottom: 12px;
+}
+
+.main__second__text {
+    padding-left: 35%;
+    font-family: var(--font--secondary);
+    font-weight: 400;
+    opacity: .7;
+    padding-bottom: 40px;
+}
+
+.main__third__text {
+    font-family: var(--font--secondary);
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-decoration: none;
+    color: var(--font--color--primary);
+    z-index: 1;
+    position: relative;
+}
+
+.main__third__text::after {
+    content: url(../img/Arrow\ 1.png);
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding-left: 5px;
+    transition: 0.3s;
+}
+
+
+.main__info {
+
+    padding-left: 35%;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.main__third__text:hover::after {
+    transform: translateX(8px);
+    /* Move para a direita */
+}
+
+
+.barra-container {
+    position: absolute;
+    width: 107px;
+    height: 2px;
+    background-color: var(--bar--color);
+    overflow: hidden;
+    top: 100%;
+}
+
+.barra {
+    position: absolute;
+    width: 0;
+    /* Começa vazia */
+    height: 100%;
+    background-color: var(--font--color--primary);
+    /* Cor da barra que enche */
+    transition: width 0.4s ease-in-out;
+    /* Animação suave */
+}
+
+.main__third__text:hover .barra {
+    width: 100%;
+    /* Enche a barra ao passar o mouse */
+
+}
+
+.main__separador__fino {
+    padding-left: 35%;
+    padding-bottom: 35px;
+}
+
+.main__content__logos {
+    display: flex; /* Alinha as logos em linha */
+    gap: 30px; /* Espaço entre as logos */
+    justify-content: center; /* Centraliza as logos */
+    padding-left: 35%;
+    padding-top: 10px;
+}
+
+.logos {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    display: block;
+}
+
+.logos:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.main__content__logos:hover .logos:not(:hover) {
+    opacity: 0.5;
+}

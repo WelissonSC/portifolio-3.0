@@ -266,9 +266,12 @@
 }
 
 .main__content__logos {
-    display: flex; /* Alinha as logos em linha */
-    gap: 30px; /* Espaço entre as logos */
-    justify-content: center; /* Centraliza as logos */
+    display: flex;
+    /* Alinha as logos em linha */
+    gap: 30px;
+    /* Espaço entre as logos */
+    justify-content: center;
+    /* Centraliza as logos */
     padding-left: 35%;
     padding-top: 10px;
 }
@@ -287,4 +290,133 @@
 
 .main__content__logos:hover .logos:not(:hover) {
     opacity: 0.5;
+}
+
+.header__hambuguer__menu {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .main__perfil__photo {
+        width: 45%;
+        position: absolute;
+        text-align: center;
+        margin-top: 120%;
+        opacity: 0.6;
+    }
+
+    .header {
+        padding: 4% 8%;
+    }
+
+    .header__img {
+        width: 15%;
+    }
+
+    .header__name {
+        width: 60%;
+        padding-left: 5%;
+    }
+
+    .header__menu {
+        flex-direction: column;
+        /* position: absolute; */
+        right: 0;
+        transition: right 0.4s ease-in-out;
+        /* box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1); */
+        /* width: 100%; */
+        z-index: 2;
+        align-items: center;
+        /* background: #3a3f47; */
+        justify-content: space-between;
+        gap: 80px;
+    }
+
+    .header__menu__links {
+        display: none;
+    }
+
+
+    .header__hambuguer__menu {
+        display: block;
+        width: 150%;
+    }
+
+    .main__container {
+        padding: 4% 8%;
+        flex-direction: column;
+    }
+
+    .main__content {
+        width: 100%;
+    }
+
+    .main__title {
+        width: 100%;
+        font-size: 1.625rem;
+    }
+
+    .main__arrow {
+        padding: 5%;
+        margin: 0 16%;
+    }
+
+    .main__baloon {
+        width: 63%;
+    }
+
+    .main__content__information {
+        align-items: flex-start;
+    }
+
+    .main__second__title {
+        padding: 10% 0% 1% 0%;
+    }
+
+    .main__second__text {
+        padding: 10% 0;
+        width: 90%;
+    }
+
+    .main__info {
+        padding: 0% 0% 0% 0%;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .ajust__position__title {
+        position: absolute;
+        padding-left: 50%;
+        padding-top: 4%;
+    }
+
+    .ajust__position__text {
+        position: absolute;
+        padding-left: 50%;
+        padding-top: 12%;
+    }
+
+    .ajust__position__more {
+        position: absolute;
+        padding-left: 50%;
+        padding-top: 27%;
+    }
+
+    .main__separador__fino {
+        width: 200%;
+        padding-left: 0;
+        padding-top: 8%;
+    }
+
+    .main__content__logos {
+        padding-left: 0;
+        padding-top: 8%;
+    }
+
+    .logos {
+        width: 100%;
+    }
 }

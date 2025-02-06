@@ -18,14 +18,26 @@
             <a href="index.html" class="header__name"> <img src="assets/img/desenvolvedor.png"
                     alt="Sinal de abertura e fechamento" class="header__img">Welisson Dev</a>
         </div>
-        <nav class="header__menu">
+        <div class="header__hamburguer__menu">
+            <div class="hamburguer-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <div class="hamburguer__menu">
             <a href="index.html" class="header__menu__links">Home</a>
-            <a href="#" class="header__menu__links">About</a>
+            <a href="#abot__area" class="hamburguer__links">Sobre-mim</a>
+            <a href="#" class="hamburguer__links">Portifólio</a>
+            <a href="#" class="hamburguer__links">Curriculo</a>
+            <a href="#" class="hamburguer__links">Contato</a>
+        </div>
+        <nav class="header__menu hide__menu">
+            <a href="index.html" class="header__menu__links">Home</a>
+            <a href="abot__area" class="header__menu__links">Sobre-mim</a>
             <a href="#" class="header__menu__links">Portifólio</a>
             <a href="#" class="header__menu__links">Curriculo</a>
             <a href="#" class="header__menu__links">Contato</a>
-            <a href="#"><img src="assets/img/Hamburguer.png" alt="Menu estilo hamburguer"
-                    class="header__hambuguer__menu"></a>
         </nav>
     </header>
     <main class="main__container">
@@ -34,11 +46,14 @@
             <h1 class="main__title">Olá eu Sou Welisson, desenvolvedor Web</h1>
             <p class="main__text">Sou um desenvolvedor Web com o objetivo de me tornar um full stack. E posso ajudar
                 você a ter um site exclusivo e personalizado.</p>
-            <div class="main__btn__scrool">
-                <img src="assets/img/Arrow 2.png" alt="Uma arrow mostrando a continuação da página" class="main__arrow">
-                <img src="assets/img/Ellipse 1.png" alt="Uma elipse decorativa do botão de navegação"
-                    class="main__baloon">
-            </div>
+            <a href="#abot__area">
+                <div class="main__btn__scrool">
+                    <img src="assets/img/Arrow 2.png" alt="Uma arrow mostrando a continuação da página"
+                        class="main__arrow">
+                    <img src="assets/img/Ellipse 1.png" alt="Uma elipse decorativa do botão de navegação"
+                        class="main__baloon">
+                </div>
+            </a>
         </section>
 
         <section class="main__content__information">
@@ -46,7 +61,7 @@
             <p class="main__second__text">Atualmente, tenho 27 anos e sou estudante de Análise e Desenvolvimento de
                 Sistemas (ADS), cursando o segundo semestre.</p>
             <div class="main__info">
-                <a href="teste " class="main__third__text">Ler mais
+                <a href="#abot__area" class="main__third__text">Ler mais
                     <div class="barra-container">
                         <div class="barra"></div>
                     </div>
@@ -56,7 +71,8 @@
             </div>
             <img src="assets/img/Rectangle 5.png" alt="Separador menor de conteudo" class="main__separador__fino hide">
             <h2 class="main__second__title ajust__position__title">Meu trabalho</h2>
-            <p class="main__second__text ajust__position__text">Busco experiência no mercado de trabalho de desenvolvimento web, caso
+            <p class="main__second__text ajust__position__text">Busco experiência no mercado de trabalho de
+                desenvolvimento web, caso
                 esteja
                 interessado em meus serviços.</p>
             <div class="main__info ajust__position__more">
@@ -77,6 +93,10 @@
                 <a href="#"><img src="assets/img/insta.png" alt="Logo Instagran" class="logos"></a>
                 <a href="#"><img src="assets/img/whats.png" alt="Logo Whatsapp" class="logos"></a>
             </div>
+        </section>
+
+        <section class="about__container" id="abot__area">
+
         </section>
 
     </main>

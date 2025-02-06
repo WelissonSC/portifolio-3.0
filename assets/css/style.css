@@ -3,6 +3,7 @@
 :root {
     --font--color--primary: #f9f9f9;
     --bar--color: #969494;
+    --animation--back: #3a3f47;
 
     --font--primary: "Krona One", serif;
     --font--secondary: 'Montserrat', serif;
@@ -296,7 +297,15 @@
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+.hamburguer__menu {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 920px) {
 
     .main__perfil__photo {
         width: 45%;
@@ -319,28 +328,21 @@
         padding-left: 5%;
     }
 
-    .header__menu {
-        flex-direction: column;
-        /* position: absolute; */
-        right: 0;
-        transition: right 0.4s ease-in-out;
-        /* box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1); */
-        /* width: 100%; */
-        z-index: 2;
-        align-items: center;
-        /* background: #3a3f47; */
-        justify-content: space-between;
-        gap: 80px;
-    }
-
     .header__menu__links {
         display: none;
     }
 
+    .hide__menu:not(:last-child) {
+        display: none;
+        position: absolute;
+        z-index: 8;
+    }
 
     .header__hambuguer__menu {
         display: block;
         width: 150%;
+        position: relative;
+        z-index: 5;
     }
 
     .main__container {
@@ -419,4 +421,87 @@
     .logos {
         width: 100%;
     }
+
+    .hamburguer__menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--animation--back);
+        flex-direction: column; /* Certifique-se de manter os itens em coluna */
+        display: flex; /* Manter display flex para o layout */
+        justify-content: space-between;
+        gap: 88px;
+        padding: 19% 0% 100% 0%;
+        text-align: center;
+        z-index: 3;
+        border-radius: 20px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        
+        /* Estado inicial invisível e fora da tela */
+        opacity: 0;
+        transform: translateY(-20px); /* Desliza de cima */
+        pointer-events: none; /* Evita interação quando invisível */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .hamburguer__menu.ativo {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;/
+    }
+
+    .hamburguer__links:hover {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    .hamburguer__menu:hover .hamburguer__links:not(:hover) {
+        opacity: 0.5;
+    }
+
+
+    .hamburguer__links {
+        text-decoration: none;
+        font-family: var(--font--secondary);
+        color: var(--font--color--primary);
+        font-size: 2rem;
+    }
+
+
+    .hamburguer-icon {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 5;
+    }
+
+    .bar {
+        height: 4px;
+        width: 100%;
+        background-color: var(--font--color--primary);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .hamburguer-icon.ativo .bar:nth-child(1) {
+        transform: rotate(50deg);
+        position: relative;
+        top: 6px;
+    }
+    
+    .hamburguer-icon.ativo .bar:nth-child(2) {
+        opacity: 0; /* A segunda barra desaparece */
+    }
+    
+    .hamburguer-icon.ativo .bar:nth-child(3) {
+        transform: rotate(-50deg);
+        position: relative;
+        top: -10px;
+    }
+
 }

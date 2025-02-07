@@ -1,0 +1,102 @@
+:root {
+    --color--destaque: #075FE4;
+    --font--color--primary: #f9f9f9;
+    --bar--color: #969494;
+    --animation--back: #3a3f47;
+
+    --font--primary: "Krona One", serif;
+    --font--secondary: 'Montserrat', serif;
+}
+
+.about__container {
+    padding: 20% 160px;
+    color: var(--font--color--primary);
+    font-family: var(--font--secondary);
+}
+
+.lateral__bar {
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 600;
+    gap: 10px;
+    padding-bottom: 3%;
+}
+
+.barr {
+    color: var(--color--destaque);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about__title {
+    font-size: 1.5rem;
+}
+
+
+.about__exp__title {
+    font-size: 2rem;
+    font-weight: 500;
+    width: 40%;
+    padding-bottom: 3%;
+}
+
+.about__text {
+    font-size: 1.375rem;
+    opacity: .7;
+}
+
+.about__info {
+    cursor: pointer;
+    gap: 5px;
+    margin-top: 3%;
+}
+
+.about__third__text {
+    font-family: var(--font--secondary);
+    font-weight: 600;
+    font-size: 1.45rem;
+    text-decoration: none;
+    color: var(--font--color--primary);
+    z-index: 1;
+    position: relative;
+}
+
+.about__third__text::after {
+    content: url(../img/Arrow\ 1.png);
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding-left: 5px;
+    transition: 0.3s;
+}
+
+.about__third__text:hover::after {
+    transform: translateX(8px);
+    /* Move para a direita */
+}
+
+
+.about__barra-container {
+    position: absolute;
+    width: 190px;
+    height: 2px;
+    background-color: var(--bar--color);
+    overflow: hidden;
+    top: 100%;
+}
+
+.about__barra {
+    position: absolute;
+    width: 0;
+    /* Começa vazia */
+    height: 100%;
+    background-color: var(--font--color--primary);
+    /* Cor da barra que enche */
+    transition: width 0.4s ease-in-out;
+    /* Animação suave */
+}
+
+.about__third__text:hover .about__barra {
+    width: 100%;
+    /* Enche a barra ao passar o mouse */
+}
+

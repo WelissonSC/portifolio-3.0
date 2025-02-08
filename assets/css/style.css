@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+    --color--destaque: #075FE4;
     --font--color--primary: #f9f9f9;
     --bar--color: #969494;
     --animation--back: #3a3f47;
@@ -28,6 +29,7 @@
     align-items: center;
     cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
+    justify-content: space-between;
 }
 
 
@@ -305,8 +307,15 @@
     display: none;
 }
 
-
-
+.footer__container {
+    color: var(--animation--back);
+    background-color: var(--color--destaque);
+    text-align: center;
+    font-family: var(--font--secondary);
+    padding: 24px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
 
 @media screen and (max-width: 920px) {
 
@@ -328,7 +337,6 @@
 
     .header__name {
         width: 60%;
-        padding-left: 5%;
     }
 
     .header__menu__links {
@@ -365,11 +373,41 @@
     .main__arrow {
         padding: 5%;
         margin: 0 16%;
+        animation: floatArrow 2s ease-in-out infinite;
+    }
+
+    @keyframes floatArrow {
+        0% {
+            transform: translateY(0);
+            /* Começa no meio */
+        }
+    
+        25% {
+            transform: translateY(-15px);
+            /* Sobe */
+        }
+    
+        50% {
+            transform: translateY(20px);
+            /* Desce */
+        }
+    
+        75% {
+            transform: translateY(-0px);
+            /* Volta mais próximo do meio */
+        }
+    
+        100% {
+            transform: translateY(0);
+            /* Retorna ao centro */
+        }
     }
 
     .main__baloon {
         width: 63%;
     }
+
+    
 
     .main__content__information {
         align-items: flex-start;
@@ -514,15 +552,47 @@
         top: -10px;
     }
 
+    
+
 }
 
 @media screen and (max-width: 430px) {
     .header__hamburguer__menu {
-        padding-top: 10%;
+        padding-top: 5%;
     }
 
     .header__name {
-        font-size: 1.27rem;
+        font-size: 1.2rem;
         padding-top: 10%;
+        width: 75%;
+    }
+
+    .main__title {
+        width: 100%;
+    }
+
+    .main__text {
+        width: 100%;
+    }
+
+    .ajust__position__title {
+        font-size: 1.3rem;
+        padding-top: 5%;
+    }
+
+    .ajust__position__text {
+        padding-top: 16%;
+    }
+
+    .ajust__position__more {
+        padding-top: 67%;
+    }
+
+    .main__perfil__photo {
+        margin-top: 200%;
+    }
+
+    .main__second__title__ajust {
+        padding: 120% 0% 1% 0%;
     }
 }

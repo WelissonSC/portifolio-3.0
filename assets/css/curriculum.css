@@ -1,0 +1,65 @@
+:root {
+    --color--destaque: #075FE4;
+    --font--color--primary: #f9f9f9;
+    --bar--color: #969494;
+    --animation--back: #3a3f47;
+
+    --font--primary: "Krona One", serif;
+    --font--secondary: 'Montserrat', serif;
+}
+
+.main__container__cv {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+    flex: 1;
+}
+
+.main__content__cv {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.main__title__cv {
+    font-family: var(--font--primary);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--font--color--primary);
+}
+
+.content__text__cv {
+    font-size: 1.125rem;
+    color: var(--font--color--primary);
+    font-family: var(--font--secondary);
+}
+
+.content__habilites {
+    list-style: circle;
+}
+
+.habilits__list {
+    color: var(--font--color--primary);
+    font-family: var(--font--secondary);
+    font-size: 1.125rem;
+    padding-bottom: 2%;
+}
+
+.links__certificate {
+    text-decoration: none;
+    color: var(--color--destaque);
+    
+}
+
+.main__perfil__cv {
+    border-radius: 50%;
+    border: 2px solid var(--color--destaque);
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    margin: 15% 60%;
+    width: 25%;
+}

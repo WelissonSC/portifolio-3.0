@@ -100,3 +100,28 @@
     /* Enche a barra ao passar o mouse */
 }
 
+@media screen and (max-width: 920px) {
+
+    .about__container {
+        padding: 40% 8%;
+    }
+
+    .about__exp__title {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .about__container {
+        padding: 40% 8%;
+    }
+
+    .about__exp__title {
+        font-size: 1.55rem;
+    }
+
+    .about__text {
+        font-size: 1.15rem;
+    }
+}
+

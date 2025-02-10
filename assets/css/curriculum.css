@@ -63,3 +63,27 @@
     margin: 15% 60%;
     width: 25%;
 }
+
+@media screen and (max-width: 768px) {
+    .main__content__cv {
+        width: 65%;
+    }
+
+    .main__perfil__cv {
+        margin-top: 35%;
+        width: 23%;
+    }
+
+    .main__title__cv {
+        font-size: 1.25rem;
+    }
+
+    .main__container__cv {
+        width: 80%;
+        padding: 5% 10%;
+    }
+
+    .content__text__cv {
+        font-size: 1.15rem;
+    }
+}

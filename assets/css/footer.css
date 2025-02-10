@@ -1,0 +1,168 @@
+:root {
+    --color--destaque: #075FE4;
+    --font--color--primary: #f9f9f9;
+    --bar--color: #969494;
+    --footer--background: #1a1a1a;
+
+    --font--primary: "Krona One", serif;
+    --font--secondary: "Montserrat", sans-serif;
+}
+
+.footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px; /* Maior espaço entre as seções */
+    color: var(--font--color--primary);
+    background-color: var(--footer--background);
+    text-align: center;
+    font-family: var(--font--secondary);
+    padding: 5% 10%;
+    font-size: 1.2rem;
+}
+
+.wrapper {
+    border-top: 1px solid var(--bar--color);
+    padding-top: 20px;
+}
+
+/* Ajustes na parte de informações */
+.footer__informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 40%;
+}
+
+.footer__img__perfil {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.footer__name {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.footer__function {
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+/* Ícones sociais */
+.footer__socials {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.footer__socials img {
+    width: 40px;
+    transition: transform 0.3s ease;
+}
+
+.footer__socials img:hover {
+    transform: scale(1.1);
+}
+
+.footer__socials:hover .logos:not(:hover) {
+    opacity: .3;
+}
+
+/* Ajustes na parte de contato */
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+}
+
+.footer__contact a {
+    text-decoration: none;
+    color: var(--font--color--primary);
+}
+
+.footer__text__contactme {
+    font-weight: 600;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilizando a seta */
+.footer__arrow {
+    width: 30px;
+    height: 5px;
+    background-color: var(--color--destaque);
+    position: relative;
+    display: inline-block;
+}
+
+.footer__arrow::after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    border-top: 5px solid var(--color--destaque);
+    border-right: 5px solid var(--color--destaque);
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+}
+
+.footer__contact a:hover .footer__arrow {
+    transform: translateX(10px);
+}
+
+/* Contatos */
+.footer__email__tel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer__contact__text {
+    text-transform: uppercase;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.footer__contacts__links {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color--destaque);
+    transition: color 0.3s ease;
+}
+
+.footer__contacts__links:hover {
+    color: #fff;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .footer__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer__informations, .footer__contact {
+        width: 100%;
+    }
+
+    .footer__socials {
+        justify-content: center;
+    }
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/animation.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/aboutCss.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="shortcut icon" href="assets/img/desenvolvedor.png" type="image/x-icon">
     <title>Home - Welisson Dev</title>
 </head>
@@ -28,14 +29,12 @@
         </div>
 
         <div class="hamburguer__menu">
-            <a href="index.html" class="header__menu__links">Home</a>
             <a href="#about__area" class="hamburguer__links">Sobre-mim</a>
             <a href="#" class="hamburguer__links">Portifólio</a>
-            <a href="#" class="hamburguer__links">Curriculo</a>
+            <a href="curriculo.html" class="hamburguer__links">Curriculo</a>
             <a href="#" class="hamburguer__links">Contato</a>
         </div>
         <nav class="header__menu hide__menu">
-            <a href="index.html" class="header__menu__links">Home</a>
             <a href="#about__area" class="header__menu__links">Sobre-mim</a>
             <a href="#" class="header__menu__links">Portifólio</a>
             <a href="curriculo.html" class="header__menu__links">Curriculo</a>
@@ -69,8 +68,6 @@
                         <div class="barra"></div>
                     </div>
                 </a>
-
-                <!-- <img src="assets/img/Rectangle 4.png" alt="Separador de conteudo" class="main__separador__barra"> -->
             </div>
             <img src="assets/img/Rectangle 5.png" alt="Separador menor de conteudo" class="main__separador__fino hide">
             <h2 class="main__second__title ajust__position__title">Meu trabalho</h2>
@@ -79,7 +76,7 @@
                 esteja
                 interessado em meus serviços.</p>
             <div class="main__info ajust__position__more">
-                <a href="#" class="main__third__text">Portifólio
+                <a href="#" class="main__third__text position__text">Portifólio
                     <div class="barra-container">
                         <div class="barra"></div>
                     </div>
@@ -123,8 +120,33 @@
                 </div>
             </a>
     </section>
-    <footer class="footer__container">
-        <p>Desenvolvido por Welisson © </p>
+    <footer class="footer__container wrapper">
+        <div class="footer__informations">
+            <img src="assets/img/perfil-full.jpg" alt="Foto de perfil do Welisson Dev" class="footer__img__perfil">
+            <span class="footer__name">Welisson Silva</span>
+            <p class="footer__function">Desenvolvedor Web</p>
+            <div class="footer__socials">
+                <a href="https://github.com/WelissonSC"><img src="assets/img/gitHub.png" alt="Logo GitHub"
+                        class="logos"></a>
+                <a href="https://www.linkedin.com/in/welissoncunha"><img src="assets/img/linkedin.png" alt="Logo Linkedin"
+                        class="logos"></a>
+                <a href="https://www.instagram.com/welisson_s_cunha/"><img src="assets/img/insta.png"
+                        alt="Logo Instagran" class="logos"></a>
+            </div>
+        </div>
+        <div class="footer__contact">
+            <a href="#">
+                <span class="footer__text__contactme">Entre em contato <div class="footer__arrow"></div></span>
+            </a>
+            <div class="footer__email__tel">
+                <span class="footer__contact__text">me mande um email:</span>
+                <a href="mailto:welissonsilvacunha@gmail.com" class="footer__contacts__links">welissonsilvacunha@gmail.com</a>
+                <span class="footer__contact__text ajust">Me ligue:</span>
+                <a href="tel:+5561984506297" class="footer__contacts__links ajust__tel">(61) 9 84506297</a>
+            </div>
+        </div>
+
+
     </footer>
 
     <script src="assets/js/script.js"></script>
